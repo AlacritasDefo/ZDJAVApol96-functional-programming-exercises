@@ -34,6 +34,9 @@ public class App
 
         ListaPracownikow.sort(comparator2);
         System.out.println(ListaPracownikow);
+
+
+
     }
 
 
