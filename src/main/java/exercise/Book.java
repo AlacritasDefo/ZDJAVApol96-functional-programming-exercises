@@ -6,11 +6,13 @@ public class Book {
     private String title;
     private double price;
     private int yearOfPublish;
+    private int id;
 
-    public Book(String title, double price, int yearOfPublish) {
+    public Book(String title, double price, int yearOfPublish, int id) {
         this.title = title;
         this.price = price;
         this.yearOfPublish = yearOfPublish;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -37,17 +39,25 @@ public class Book {
         this.yearOfPublish = yearOfPublish;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Double.compare(book.price, price) == 0 && yearOfPublish == book.yearOfPublish && Objects.equals(title, book.title);
+        return Double.compare(book.price, price) == 0 && yearOfPublish == book.yearOfPublish && id == book.id && Objects.equals(title, book.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, price, yearOfPublish);
+        return Objects.hash(title, price, yearOfPublish, id);
     }
 
     @Override
@@ -56,6 +66,8 @@ public class Book {
                 "title='" + title + '\'' +
                 ", price=" + price +
                 ", yearOfPublish=" + yearOfPublish +
+                ", id=" + id +
                 '}';
     }
 }
+
