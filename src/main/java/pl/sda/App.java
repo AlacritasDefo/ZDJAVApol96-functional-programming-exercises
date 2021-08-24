@@ -29,6 +29,11 @@ public class App
         ListaPracownikow.sort(comparator);
 
         System.out.println(ListaPracownikow);
+
+        Comparator<User> comparator2 = Comparator.comparingInt(User::getRokurodzenia);
+
+        ListaPracownikow.sort(comparator2);
+        System.out.println(ListaPracownikow);
     }
 
 
