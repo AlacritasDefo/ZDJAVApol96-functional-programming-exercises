@@ -60,6 +60,7 @@ public class Person {
         return Objects.hash(imie, nazwisko, pesel, rokurodzenia);
     }
 
+
     @Override
     public String toString() {
         return "Person{" +

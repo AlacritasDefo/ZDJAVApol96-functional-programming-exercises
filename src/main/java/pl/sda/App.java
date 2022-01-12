@@ -12,6 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
+
        Comparator<User> comparator = (o1, o2) -> o1.getId() - o2.getId();
 
 

@@ -8,9 +8,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
-/*Stwórz predykat sprawdzający czy użytkownik urodził się po roku 2000 a następnie w pętli dla
-kilku użytkowników wywołaj to sprawdzenie w klauzuli if. Jeśli użytkownik urodził się po roku 2000
-to wyświetl jego dane w konsoli.*/
 public class Main {
     public static void main(String[] args) {
         Predicate<User> after2000 = user -> user.getRokurodzenia()>2000;

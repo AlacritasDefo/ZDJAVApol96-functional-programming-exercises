@@ -70,6 +70,7 @@ public class User {
         return Objects.hash(id, imie, nazwisko, pesel, rokurodzenia);
     }
 
+
     @Override
     public String toString() {
         return "User{" +
